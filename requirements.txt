@@ -2,3 +2,6 @@ Flask>=3.0,<4
 google-genai>=1.0.0
 python-dotenv>=1.0.0
 gunicorn>=22.0.0
+langchain>=1.0.0
+langchain-groq>=1.0.0
+langchain-tavily>=0.2.0
