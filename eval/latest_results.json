@@ -1,0 +1,164 @@
+{
+  "passed": 10,
+  "total": 10,
+  "pass_rate": 100.0,
+  "results": [
+    {
+      "id": "TC01",
+      "prompt": "Calculate 18 * 7 and explain the result briefly.",
+      "passed": true,
+      "expected_tools": [
+        "calculate"
+      ],
+      "used_tools": [
+        "calculate"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "**Result:** 18 × 7 = **126**\n\n**Brief explanation:** Multiplying 18 by 7 adds 18 together seven times (18 + 18 + 18 + 18 + 18 + 18 + 18). This sum equals 126.\n\n**Steps taken**\n1. Called the `calculate` tool with the expression `18 * 7`.\n2. Received the result `126`.\n3. Provided the result and a short explanation.",
+      "error": null
+    },
+    {
+      "id": "TC02",
+      "prompt": "What is 144 divided by 12? Use a calculation tool.",
+      "passed": true,
+      "expected_tools": [
+        "calculate"
+      ],
+      "used_tools": [
+        "calculate"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "**Answer:** 144 divided by 12 equals **12**.\n\n**Steps taken**\n1. Called the **calculate** tool with the expression `144 / 12`.\n2. Received the result `12.0` from the tool.\n3. Presented the result to the user.",
+      "error": null
+    },
+    {
+      "id": "TC03",
+      "prompt": "Calculate (25 + 15) / 4.",
+      "passed": true,
+      "expected_tools": [
+        "calculate"
+      ],
+      "used_tools": [
+        "calculate"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "**Result:** 10.0  \n\n**Steps taken**\n1. Called the **calculate** tool with the expression `(25 + 15) / 4`.\n2. Received the computed result **10.0** from the tool.",
+      "error": null
+    },
+    {
+      "id": "TC04",
+      "prompt": "Search the web for the official Python website and tell me its domain.",
+      "passed": true,
+      "expected_tools": [
+        "tavily_search"
+      ],
+      "used_tools": [
+        "tavily_search",
+        "tavily_search"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "**Official Python website domain:** `python.org`\n\n**Sources**\n\n- Search result showing the official home page: “The official home of the Python Programming Language.” – URL: https://www.python.org/accounts/login【2†L1-L2】  \n- Additional result confirming the site’s purpose: “The official home of the Python Programming Language.” – URL: https://www.python.org/about【2†L1-L2】\n\n**Steps taken**\n1. Queried the web for “official Python website” and “python.org official website domain” using the `tavily_search` tool.  \n2. Reviewed the returned results, which clearly identified the official site as `python.org`.  \n3. Provided the domain to the user with citations.",
+      "error": null
+    },
+    {
+      "id": "TC05",
+      "prompt": "Search the web for the official LangChain documentation and give me its domain.",
+      "passed": true,
+      "expected_tools": [
+        "tavily_search"
+      ],
+      "used_tools": [
+        "tavily_search"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "The official LangChain documentation is hosted at **docs.langchain.com**【tavily_search:0】.  \n\n**Domain:** `docs.langchain.com`  \n\n**Steps taken**\n1. Used `tavily_search` to look up “LangChain official documentation.”\n2. Identified the URL of the official docs (docs.langchain.com) from the search results.",
+      "error": null
+    },
+    {
+      "id": "TC06",
+      "prompt": "Search the web for current information about retrieval-augmented generation (RAG), then give me a two-sentence summary.",
+      "passed": true,
+      "expected_tools": [
+        "tavily_search"
+      ],
+      "used_tools": [
+        "tavily_search"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "Retrieval‑augmented generation (RAG) is an architecture that pairs large language models with external knowledge sources—such as vector stores, keyword indexes, or databases—so that at inference time the model first retrieves relevant passages, augments the prompt with this context, and then generates a response, improving factual accuracy and enabling up‑to‑date, domain‑specific answers【5†L1-L9】.  Recent work (2024‑2025) focuses on “advanced RAG” techniques—hybrid and cross‑encoder retrieval, reranking, self‑reflection (Self‑RAG), recursive abstraction (RAPTOR), GraphRAG, and adaptive pipelines that adjust retrieval depth to question complexity—pushing benchmark factual‑answer rates from ~44 % for naïve pipelines to over 60 % while also confronting practical issues like data versioning, sprawl, and the emergence of massive‑context LLMs that can sometimes bypass retrieval altogether【2†L1-L9】【3†L1-L8】.  \n\n**Steps taken**  \n1. Queried the web for recent RAG information (tavily_search).  \n2. Extracted key points from multiple up‑to‑date sources.  \n3. Synthesized a concise two‑sentence summary using the retrieved content.",
+      "error": null
+    },
+    {
+      "id": "TC07",
+      "prompt": "Save a research note titled 'Evaluation Basics' with this note: RAG evaluation should check retrieval relevance, answer faithfulness, and answer usefulness.",
+      "passed": true,
+      "expected_tools": [
+        "save_research_note"
+      ],
+      "used_tools": [
+        "save_research_note"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "Your research note has been saved successfully.\n\n**Steps taken**\n1. Called `save_research_note` with the provided title and content.",
+      "error": null
+    },
+    {
+      "id": "TC08",
+      "prompt": "Search for the official GitHub website, then calculate 19 * 23 and summarize both results.",
+      "passed": true,
+      "expected_tools": [
+        "tavily_search",
+        "calculate"
+      ],
+      "used_tools": [
+        "tavily_search",
+        "tavily_search",
+        "tavily_search",
+        "calculate"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "**Official GitHub website**\n\n- The primary domain for GitHub is **https://github.com**. The search result shows the homepage with navigation links to the ecosystem (API, CLI, Desktop, Marketplace, etc.), support resources (Docs, Community Forum, Status), and company information (About, Careers, Blog)【3†results.1】. This is the official site where users can sign in, explore repositories, and access all GitHub services.\n\n**Arithmetic calculation**\n\n- The product of 19 × 23 is **437**【2†result】.\n\n**Summary**\n\n- The official GitHub website is https://github.com, the central hub for code hosting, collaboration tools, and developer resources.\n- The requested multiplication yields 437.\n\n**Steps taken**\n\n1. Searched for “official GitHub website” using the tavily_search tool and identified https://github.com as the official site.  \n2. Performed the arithmetic 19 × 23 with the calculate tool.  \n3. Combined the findings into a concise summary.",
+      "error": null
+    },
+    {
+      "id": "TC09",
+      "prompt": "Calculate 250 * 0.18 to estimate 18 percent of 250.",
+      "passed": true,
+      "expected_tools": [
+        "calculate"
+      ],
+      "used_tools": [
+        "calculate"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "**Result:** 45.0  \n\n**Explanation:** Using the calculation tool, \\(250 \\times 0.18 = 45.0\\), which estimates 18 % of 250.\n\n**Steps taken**\n1. Called the `calculate` tool with the expression `250 * 0.18`.\n2. Received the result `45.0`.\n3. Reported the result to the user.",
+      "error": null
+    },
+    {
+      "id": "TC10",
+      "prompt": "Search the web for what LangGraph is used for, then calculate 64 / 8. Give me a concise combined answer.",
+      "passed": true,
+      "expected_tools": [
+        "tavily_search",
+        "calculate"
+      ],
+      "used_tools": [
+        "tavily_search",
+        "calculate"
+      ],
+      "missing_tools": [],
+      "keyword_found": true,
+      "answer": "**Answer**\n\nLangGraph is a low‑level orchestration framework and runtime for building, managing, and deploying long‑running, stateful AI agents. It lets developers combine deterministic, hand‑coded steps with LLM‑driven actions in a single graph, enabling use‑cases such as autonomous agents, multi‑agent collaboration, complex workflows, and human‑in‑the‑loop approval processes.  \n\nThe arithmetic result: **64 ÷ 8 = 8**.\n\n**Steps taken**\n1. Used **tavily_search** to find current information on what LangGraph is used for.  \n2. Used **calculate** to evaluate 64 / 8.  \n3. Combined the research summary with the calculation into a concise response.",
+      "error": null
+    }
+  ]
+}

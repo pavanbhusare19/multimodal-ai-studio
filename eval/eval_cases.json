@@ -1,0 +1,106 @@
+[
+  {
+    "id": "TC01",
+    "prompt": "Calculate 18 * 7 and explain the result briefly.",
+    "expected_tools": [
+      "calculate"
+    ],
+    "expected_any_keywords": [
+      "126"
+    ]
+  },
+  {
+    "id": "TC02",
+    "prompt": "What is 144 divided by 12? Use a calculation tool.",
+    "expected_tools": [
+      "calculate"
+    ],
+    "expected_any_keywords": [
+      "12"
+    ]
+  },
+  {
+    "id": "TC03",
+    "prompt": "Calculate (25 + 15) / 4.",
+    "expected_tools": [
+      "calculate"
+    ],
+    "expected_any_keywords": [
+      "10"
+    ]
+  },
+  {
+    "id": "TC04",
+    "prompt": "Search the web for the official Python website and tell me its domain.",
+    "expected_tools": [
+      "tavily_search"
+    ],
+    "expected_any_keywords": [
+      "python.org"
+    ]
+  },
+  {
+    "id": "TC05",
+    "prompt": "Search the web for the official LangChain documentation and give me its domain.",
+    "expected_tools": [
+      "tavily_search"
+    ],
+    "expected_any_keywords": [
+      "langchain.com"
+    ]
+  },
+  {
+    "id": "TC06",
+    "prompt": "Search the web for current information about retrieval-augmented generation (RAG), then give me a two-sentence summary.",
+    "expected_tools": [
+      "tavily_search"
+    ],
+    "expected_any_keywords": [
+      "retrieval",
+      "generation",
+      "rag"
+    ]
+  },
+  {
+    "id": "TC07",
+    "prompt": "Save a research note titled 'Evaluation Basics' with this note: RAG evaluation should check retrieval relevance, answer faithfulness, and answer usefulness.",
+    "expected_tools": [
+      "save_research_note"
+    ],
+    "expected_any_keywords": [
+      "saved"
+    ]
+  },
+  {
+    "id": "TC08",
+    "prompt": "Search for the official GitHub website, then calculate 19 * 23 and summarize both results.",
+    "expected_tools": [
+      "tavily_search",
+      "calculate"
+    ],
+    "expected_any_keywords": [
+      "437"
+    ]
+  },
+  {
+    "id": "TC09",
+    "prompt": "Calculate 250 * 0.18 to estimate 18 percent of 250.",
+    "expected_tools": [
+      "calculate"
+    ],
+    "expected_any_keywords": [
+      "45"
+    ]
+  },
+  {
+    "id": "TC10",
+    "prompt": "Search the web for what LangGraph is used for, then calculate 64 / 8. Give me a concise combined answer.",
+    "expected_tools": [
+      "tavily_search",
+      "calculate"
+    ],
+    "expected_any_keywords": [
+      "8"
+    ]
+  }
+]
